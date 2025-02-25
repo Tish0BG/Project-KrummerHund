@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lese Akademie</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/image1.png">
+    <link rel="icon" type="image/png" href="images/image1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="images/image1.png" alt="Lese Akademie Logo" class="logo">
+                <span class="site-name">Lese Akademie</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="buch.html">Das Buch</a></li>
+                <li><a href="vision.html">Unsere Vision</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="photos.html">Fotos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h1>Fotos</h1>
+        <p>Fotos unserer Arbeit</p>
+    </header>
+
+    <div class="slider-container">
+        <button class="slider-button prev" onclick="changeSlide(-1)">❮</button>
+        <div class="slide fade">
+            <img src="images/image13.png" alt="Foto 1">
+        </div>
+        <div class="slide fade">
+            <img src="images/image12.png" alt="Foto 2">
+        </div>
+        <div class="slide fade">
+            <img src="images/image11.png" alt="Foto 3">
+        </div>
+        <div class="slide fade">
+            <img src="images/image10.png" alt="Foto 4">
+        </div>
+        <div class="slide fade">
+            <img src="images/image9.png" alt="Foto 5">
+        </div>
+        <div class="slide fade">
+            <img src="images/image8.png" alt="Foto 6">
+        </div>
+        <div class="slide fade">
+            <img src="images/image7.png" alt="Foto 7">
+        </div>
+        <div class="slide fade">
+            <img src="images/image6.png" alt="Foto 8">
+        </div>
+        <div class="slide fade">
+            <img src="images/image5.png" alt="Foto 9">
+        </div>
+        <button class="slider-button next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        
+        // Remove active class from all slides
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            slides[i].classList.remove('active');
+        }
+        
+        // Add active class to current slide
+        slides[slideIndex-1].style.display = "block";
+        slides[slideIndex-1].classList.add('active');
+    }
+    </script>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-logo-container">
+                <img src="images/image1.png" alt="Lese Akademie Logo" class="footer-logo">
+            </div>
+            <div class="footer-about">
+                <h3>Über uns</h3>
+                <p>Wir sind vier Schüler – Beloslava, Gergana, Dobromira und Tihomir – vom Fremdsprachen­gymnasium "Peyo Yavorov" in der Stadt Silistra. Wir sind Buchliebhaber. Auf dieser Website können Sie unsere Arbeit zum Buch "Krummer Hund" finden.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontaktieren Sie uns</h3>
+                <div class="contact-info">
+                    <div class="contact-line">Email: tihomir.georgiev@eg-yavorov.com</div>
+                    <div class="contact-line">Schule: EG "PEYO YAVOROV"</div>
+                    <div class="contact-line">Stadt: Silistra, Bulgarien</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
