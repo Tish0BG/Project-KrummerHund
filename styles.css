@@ -1064,13 +1064,16 @@ p {
     max-width: 700px;
     position: relative;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 40px;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .slide {
     display: none;
     text-align: center;
     transform-origin: center;
+    width: 100%;
 }
 
 .slide img {
@@ -1079,6 +1082,8 @@ p {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease;
+    display: block;
+    margin: 0 auto;
 }
 
 .slide.active {
@@ -1113,6 +1118,7 @@ p {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+    z-index: 2;
 }
 
 .slider-button:hover {
@@ -1120,11 +1126,11 @@ p {
 }
 
 .prev {
-    left: -20px;
+    left: 5px;
 }
 
 .next {
-    right: -20px;
+    right: 5px;
 }
 
 .fade {
@@ -1139,7 +1145,9 @@ p {
 
 @media (max-width: 768px) {
     .slider-container {
-        padding: 0 40px;
+        padding: 0 30px;
+        margin: 20px auto;
+        width: 100%;
     }
     
     .slider-button {
@@ -1147,9 +1155,29 @@ p {
         height: 35px;
         font-size: 16px;
     }
+
+    .prev {
+        left: 2px;
+    }
+
+    .next {
+        right: 2px;
+    }
+
+    .main-header, 
+    .footer-section {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 }
 
-/* Add these scroll animation styles */
 .reveal {
     position: relative;
     opacity: 0;
