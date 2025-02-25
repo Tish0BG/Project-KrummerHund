@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lese Akademie</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/image1.png">
+    <link rel="icon" type="image/png" href="images/image1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay" id="overlay" onclick="closeCharacterInfo()"></div>
+
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="images/image1.png" alt="Lese Akademie Logo" class="logo">
+                <span class="site-name">Lese Akademie</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="buch.html">Das Buch</a></li>
+                <li><a href="vision.html">Unsere Vision</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="photos.html">Fotos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <h1>DAS BUCH</h1>
+        <p>Information über das Buch und die Autorin</p>
+    </header>
+
+    <div class="content-section">
+        <h2 class="section-title reveal fade-bottom">Die Autorin</h2>
+        <div class="author-section">
+            <img src="images/image3.png" alt="Juliane Pickel" class="author-image reveal fade-left">
+            <p class="author-text reveal fade-right">
+                Juliane Pickel ist eine deutsche Pädagogin, Journalistin und Schriftstellerin. Sie wurde 1971 in Ratingen geboren. In Münster und Hamburg studierte sie Erziehungswissenschaft. Nach einer anschließenden Ausbildung zur Fachzeitschriftenredakteurin arbeitet sie in der Online-Redaktion des NDR. Seit 1994 lebt sie in Hamburg.
+                <br><br>
+                2021 erschien mit Krummer Hund Juliane Pickels Debütroman, der breit rezipiert sowie mehrfach ausgezeichnet wurde. Der Roman wurde von Jana Vetten für die Bühne adaptiert und am 23. Oktober 2021 im Theater an der Parkaue in Berlin uraufgeführt; am 16. März 2024 feierte das Stück im Theater im Marienbad in Freiburg erneut eine Premiere. Mit Rattensommer folgte 2023 Juliane Pickels zweiter Roman, der ebenfalls auf ein positives Echo stieß.
+            </p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title reveal fade-bottom">Das Buch</h2>
+        <div class="book-section">
+            <div class="book-text reveal fade-left">
+                Krummer Hund ist ein im Jahre 2021 erschienener Jugendroman von Juliane Pickel. Der Roman ist ihr Debüt und wurde 2022 für den Jugendliteraturpreis nominiert. Dudden wurde er erstmals 2021 auf die Bühne gebracht. Für das Jahr 2025 wurde der Roman in Baden-Württemberg Pflichtlektüre für den Real- und Werkrealschulabschluss.
+                <br><br>
+                Der 15-jährige Daniel struggles immer wieder mit seinen Emotionen, nachdem seine Mutter und er von seinem Vater verlassen wurden. Dies äussert sich fägt in Wutausbrüchen, da er sich von seiner Mutter nicht verstanden fühlt und sich nicht einmal seinem einsteine ​​Freund Edgar öffent kann. Hinzu kommen der Tod seines Hundes Ozzy, der die letzte Verbindung zu seinem Vater war, und die neue Beziehung seiner Mutter zu dem Tierarzt, den Daniel für Ozzys Verantartung macht macht.
+                <br><br>
+                Als dann der Bruder von Alina, seiner erklärten Feindin, überfahren wird, tun sie sich zusammen und versuchen, den Mörder zu entlarven. Dabei denkt Daniel, dass der neue Freund seiner Mutter in den Mord verwickelt ist. Auf dieser Suche lernen sich Daniel und Alina selbst und gegensteige besser kennen und werden, sehr zum Entsetzen von Edgar, ein Paar. Der Roman verfogt, wie Daniel mit seiner Wut, den Lügen, in denen er sich verstrickt, und der Angst vor der Aufdeckung der Identität des Mörders umgeht.
+            </div>
+            <img src="images/image2.jpg" alt="Krummer Hund Buchcover" class="book-image reveal fade-right">
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title reveal fade-bottom">Figuren</h2>
+        <div class="characters-section">
+            <p class="character-instruction reveal fade-bottom">Klicken Sie auf den Namen, um Informationen darüber zu erhalten!</p>
+            <div class="character-grid">
+                <div class="character-button reveal fade-bottom" onclick="showCharacter('daniel')">Daniel</div>
+                <div class="character-button reveal fade-bottom" onclick="showCharacter('ozzy')">Ozzy</div>
+                <div class="character-button reveal fade-bottom" onclick="showCharacter('mutter')">Daniels Mutter</div>
+                <div class="character-button reveal fade-bottom" onclick="showCharacter('vater')">Daniels Vater</div>
+                <div class="character-button reveal fade-bottom" onclick="showCharacter('doc')">Dr. Thomas König</div>
+                <div class="character-button reveal fade-bottom" onclick="showCharacter('alina')">Alina von Wildern</div>
+                <div class="character-button reveal fade-bottom" onclick="showCharacter('pascal')">Pascal</div>
+                <div class="character-button reveal fade-bottom" onclick="showCharacter('edgar')">Edgar</div>
+            </div>
+        </div>
+        
+        <div id="characterInfo" class="character-info-box" style="display: none;">
+            <div class="info-header">
+                <h3 id="characterName"></h3>
+                <button onclick="closeCharacterInfo()" class="close-button">&times;</button>
+            </div>
+            <p id="characterDescription"></p>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-logo-container">
+                <img src="images/image1.png" alt="Lese Akademie Logo" class="footer-logo">
+            </div>
+            <div class="footer-about">
+                <h3>Über uns</h3>
+                <p>Wir sind vier Schüler – Beloslava, Gergana, Dobromira und Tihomir – vom Fremdsprachen­gymnasium "Peyo Yavorov" in der Stadt Silistra. Wir sind Buchliebhaber. Auf dieser Website können Sie unsere Arbeit zum Buch "Krummer Hund" finden.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontaktieren Sie uns</h3>
+                <div class="contact-info">
+                    <div class="contact-line">Email: tihomir.georgiev@eg-yavorov.com</div>
+                    <div class="contact-line">Schule: EG "PEYO YAVOROV"</div>
+                    <div class="contact-line">Stadt: Silistra, Bulgarien</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const characters = {
+        daniel: {
+            name: "Daniel",
+            description: "Der 15-jährige Daniel Winkler, die Hauptfigur des Romans, lebt mit seiner Mutter allein in einer kleinen Wohnung, seit sein Vater die Familie vor fünf Jahren verlassen hat. Er ist in der Schule eher ein Außenseiter, weil er ständig unkontrollierte Wutausbrüche hat. Während seiner Wutausbrüche kann er sich nicht kontrollieren und beschädigt dabei Gegenstände oder verletzt Personen. Er mag zu Beginn den neuen Liebhaber seiner Mutter nicht, kommt ihm jedoch im Laufe der Handlung immer näher."
+        },
+        ozzy: {
+            name: "Ozzy",
+            description: "Der mittlerweile krebskranke Hund Daniels war das letzte Geschenk seines Vaters. Daniel liebt ihn sehr. Er muss aufgrund seiner Erkrankung eingeschläfert werden. Es fällt Daniel sehr schwer, diese Tatsache zu akzeptieren und er tut in den weiteren Wochen so, als ob der Vierbeiner noch bei ihm wäre. Ozzy ist schwarz, laut Daniel hässlich und zottelig, und erinnert an Ozzy Osbourne."
+        },
+        mutter: {
+            name: "Daniels Mutter",
+            description: "Nachdem sie von ihrem Ehemann verlassen wurde, sucht sie seit Jahren nach einem neuen Partner, aber auch nach einer Vaterfigur für ihren Sohn. Es endet jedoch meist mit kurzlebigen Beziehungen. Sie lernt den Tierarzt kennen, als Daniels kranker Hund eingeschläfert werden muss."
+        },
+        vater: {
+            name: "Daniels Vater",
+            description: "Der Vater kommt nie direkt im Roman vor. Es wird immer in der Rückschau von ihm berichtet oder Daniel stellt ihn sich vor. Dadurch, dass er vor fünf Jahren verschwunden ist, hat Daniel kein genaues Bild von seinem Vater. Die Leserinnen und Leser erfahren nur dann etwas über ihn, wenn Daniel sich beispielsweise vorstellt, dass eine bestimmte Situation vielleicht besser ablaufen würde, wenn sein Vater noch bei ihm wäre."
+        },
+        doc: {
+            name: "Tierarzt Dr. Thomas König (Doc)",
+            description: "Er schläfert gleich im ersten Kapitel den kranken Ozzy ein. Danach geht er mit Daniels Mutter aus. Im Verlauf der Handlung ist er immer öfter bei Daniel zuhause und zieht am Ende sogar bei ihnen ein. Er wird eine Zeit lang von Daniel als Mörder Pascals, des Bruders von Alina, dargestellt, jedoch wird Daniel klar, dass der Doc dazu nicht in der Lage ist."
+        },
+        alina: {
+            name: "Alina von Wildern (Princess Evil)",
+            description: "Rücksichtslos in Bezug auf die Gefühle anderer, ist sie gemein zu Schülern und Lehrern. Daniel und Edgar nennen sie deshalb Princess Evil. Sie schafft in der Schule die Illusion, perfekt und unerreichbar zu sein, jedoch ist sie in ihrem privaten Leben ein gewöhnlicher Teenager."
+        },
+        pascal: {
+            name: "Pascal",
+            description: "Der Bruder Alinas sah im Vergleich zu Alinas anscheinender Perfektion etwas merkwürdig aus. Pascal wird nach einer Party angefahren und erliegt kurz darauf seinen Verletzungen. Nach seinem Tod versucht Daniel gemeinsam mit Alina (Princess Evil) herauszufinden, wer ihn angefahren hat."
+        },
+        edgar: {
+            name: "Edgar",
+            description: "Dadurch, dass auch Edgar ein Außenseiter ist, sind er und Daniel sehr eng befreundet. Edgars Leidenschaft sind seine außergewöhnlichen Bilder. Er findet Alinas Verhalten ganz und gar nicht in Ordnung und beobachtet sie heimlich. Zu Beginn der Handlung beobachten Edgar und Daniel Alina gemeinsam."
+        }
+    };
+
+    function showCharacter(id) {
+        const character = characters[id];
+        document.getElementById('characterName').textContent = character.name;
+        document.getElementById('characterDescription').textContent = character.description;
+        
+        const overlay = document.getElementById('overlay');
+        const infoBox = document.getElementById('characterInfo');
+        
+        overlay.style.display = 'block';
+        infoBox.style.display = 'block';
+        
+        // Trigger reflow
+        void infoBox.offsetWidth;
+        
+        overlay.classList.add('active');
+        infoBox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCharacterInfo() {
+        const overlay = document.getElementById('overlay');
+        const infoBox = document.getElementById('characterInfo');
+        
+        overlay.classList.remove('active');
+        infoBox.classList.remove('active');
+        
+        // Wait for animation to finish before hiding elements
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            infoBox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    // Close on overlay click
+    document.getElementById('overlay').addEventListener('click', closeCharacterInfo);
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeCharacterInfo();
+    });
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        
+        reveals.forEach((reveal) => {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveal.getBoundingClientRect().top;
+            var elementVisible = 150;
+            
+            if (elementTop < windowHeight - elementVisible) {
+                reveal.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal(); // To check for elements on page load
+    </script>
+</body>
+</html>
